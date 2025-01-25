@@ -1,0 +1,291 @@
+/** pseudoclase, asigna variables predefenidas */
+:root{
+    --color-primario: #ff7b00;
+    --color-secundario: #a26e3e;
+    --blanco: #FFF;
+}
+
+/** selector universal */
+*{
+    margin: 0;
+    padding: 0;
+    /** manejamos que las cajitas no se sobrepasen del contenedor */
+    box-sizing: border-box;
+}
+
+nav{
+    text-align: center;
+}
+
+nav ul li{
+    /** los elementos en bloque los pone en linea */
+    display: inline-block;
+    list-style: none;
+    margin: .6rem; /** 1rem = 16px */
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+.seccion-restaurante{
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image1_jcpygh.jpg");
+    width: 100%;
+    height: 600px;
+    /** indicamos que el contenido se adapte al contenedor y se reposicione hacia abajo (la imagen) */
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /** 
+        combina 2 propiedades flex-direction y flex-wrap
+        indicamos la orientacion de los elementos
+    */
+    flex-flow: column nowrap;
+    /** propiedad para recortar la imagen */
+    /**
+        0,0 => superior izquiera
+        100,0 => superior derecha
+        100,80 => borde inferior de la derecha
+        0,100 => borde inferior izquierdo
+     */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.titulo{
+    color: var(--blanco);
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.subtitulo{
+    color: var(--blanco);
+    font-size: 2rem;
+    letter-spacing: .7rem;
+    font-weight: 400;
+}
+
+.caja{
+    width: 80%;
+    margin: auto;
+}
+
+.nosotros{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    flex-flow: row wrap;
+}
+
+.nosotros-imagen{
+    position: relative;
+    /**
+        flex-grow: definimos la capacidad de como va crecer el elemento
+
+        flex-shrink: definir la capacidad de como va encoger el elemento
+
+        flex-basis: define el tamaño del elemento
+    */
+    flex: 0 0 400px;
+}
+
+.nosotros-imagen img{
+    width: 100%;
+    height: 300px;
+    /** adaptamos la imagen a su contenedor */
+    object-fit: cover;
+    box-shadow: 0 0 10px 2px var(--color-secundario);
+    transition: all .2s;
+
+    /** anidamos el efecto hover */
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+/* .nosotros-imagen img:hover{
+    box-shadow: 0 0 10px 2px #34031d;
+} */
+
+.nosotros-contenido{
+    flex: 0 0 50%;
+}
+
+/** estilos para el texto */
+h2{
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 400;
+}
+
+span{
+    color: var(--color-primario);
+}
+
+.nosotros-contenido p{
+    line-height: 3rem;
+    color: #666;
+}
+
+.seccion-ofertas{
+    position: relative;
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image3_ulstmf.jpg");
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    color: var(--blanco);
+}
+
+.btn{
+    width: 170px;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: var(--blanco);
+}
+
+.btn-ofertas{
+    background-color: var(--color-primario);
+}
+
+.btn-menu{
+    background-color: var(--color-secundario);
+}
+
+/** APARTADO MENU **/
+.menu-hamburguesa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.menu-tarjeta{
+    width: 30%;
+    height: 300px;
+    box-shadow: 0 0 10px 5px;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.menu-tarjeta:nth-child(1){
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product1_loak4u.jpg");
+}
+
+.menu-tarjeta:nth-child(2){
+    background-image: url(https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/product2_sgcwng.jpg);
+}
+
+.menu-tarjeta:nth-child(3){
+    background-image: url(https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/product3_rhoyoi.jpg);
+}
+.menu-tarjeta:nth-child(4){
+    background-image: url(https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product4_vwkcmh.jpg);
+}
+.menu-tarjeta:nth-child(5){
+    background-image: url(https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product5_ugbrat.jpg);
+}
+.menu-tarjeta:nth-child(6){
+    background-image: url(https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product6_f6gyfk.jpg);
+}
+
+.tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.menu-tarjeta:hover .tarjeta{
+    opacity: 1;
+}
+
+h5{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-primario);
+    padding: 10px 0 0 0;
+}
+
+.btn-tarjeta{
+    background-color: var(--color-secundario);
+}
+
+/** Efecto oscuro */
+.seccion-restaurante::before, .seccion-ofertas::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.seccion-restaurante *, .seccion-ofertas *{
+    position: relative;
+}
+
+.espacio{
+    /** aplica 100px arriba y abajo */
+    padding: 100px 0;
+}
+
+/** USO DE MEDIA QUERY */
+@media(max-width: 576px){
+    .menu-tarjeta{
+        width: 100%;
+    }
+
+    .titulo{
+        font-size: 2.5rem;
+    }
+
+    .subtitulo{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media(max-width: 768px){
+    .nosotros-contenido{
+        flex: 0 0 100%;
+    }
+
+    .nosotros-imagen{
+        flex: 0 0 100%;
+    }
+} 
+
+/* nav a{
+    margin: .6rem;
+    text-decoration: none;
+    color: var(--color-secundario);
+} */
+

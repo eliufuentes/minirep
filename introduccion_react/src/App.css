@@ -1,0 +1,22 @@
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  background-color: seagreen;
+  padding: 1rem;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-note{
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  padding: 1rem;
+  margin: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo" class="titulo">Hola</h1>
+    <input type="text" name="nombre">
+    <section id="seccion-hipervinculos">
+        <a href="#"></a>
+        <a href="facebook.com">Facebook</a>
+        <a href="#"></a>
+    </section>
+
+    <form action="" onsubmit="enviarDatos()">
+        
+    </form>
+
+    <section>
+        <select name="" id="" onchange="verificarProducto()">
+            <option value="Camisa">Camisa</option>
+            <option value="Pantalon">Pantalon</option>
+            <option value="Zapatos">Zapatos</option>
+        </select>
+    </section>
+</body>
+<script>
+    function verificarProducto(){
+        alert("Seleccionaste algo");
+    }
+
+    //API DE NAVEGACION
+    let titulo = document.getElementById('titulo');
+    console.log(titulo)
+    console.log(titulo.textContent)
+
+    let titulo2 = document.querySelector('#titulo');
+    let nombre = document.querySelector('input[name="nombre"]');
+    console.log(nombre)
+    let hipervinculo = document.querySelector('a[href="facebook.com"]')
+
+    let lista = document.querySelectorAll('a');
+
+    //API DE MANIPULACION
+    let hipervinculo2 = document.createElement('a');
+    //hipervinculo2.appendChild('body');
+    //seccion -> acceder
+    let section = document.querySelector('#seccion-hipervinculos');
+    //agregamos el elemento a la seccion
+    section.appendChild(hipervinculo2);
+    hipervinculo2.textContent = "Prueba JS";
+    //document.body.appendChild(hipervinculo2);
+</script>
+</html>

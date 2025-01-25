@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Document</title>
+</head>
+<style>
+    /*** diseno a la pagina */
+</style>
+<!--
+    selectores css:
+        etiqueta html, clases, id (unico) o atributo
+        .encabezado
+        #encabezado
+        a[href="#"]
+        .encabezado a{
+        }
+-->
+<body>
+    <!-- encabezado -->
+    <header class="encabezado" id="encabezado">
+        <!-- menu de navegacion -->
+        <nav>
+            <!-- lista desordenada -->
+            <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Nosotros</a></li>
+                <li><a href="#" class="nav-link">Menu</a></li>
+                <li><a href="#" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="encabezado" id="contenedor-principal">
+        <section class="seccion-restaurante espacio">
+            <h1 class="titulo">RESTAURANTE</h1>
+            <h3 class="subtitulo">Experiencia a la mejor comida</h3>
+        </section>
+        <!-- apartado de nosotros -->
+        <section class="seccion-nosotros caja espacio">
+            <h2>Nosotros</h2>
+            <section class="nosotros">
+                <div class="nosotros-contenido">
+                    <h4>Este es <span>Nuestro Restaurante</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sed odit, saepe recusandae reprehenderit voluptatem.</p>
+                </div>
+                <div class="nosotros-imagen">
+                    <img src="https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image2_fut2k2.jpg" alt="logo hamburguesa">
+                </div>
+            </section>
+        </section>
+        <!-- apartado de ofertas -->
+        <section class="seccion-ofertas espacio caja">
+            <h2>Los mejores productos</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn btn-ofertas">Ordenar Ahora</button>
+        </section>
+        <!-- apartado de menu -->
+        <section class="espacio caja">
+            <h2>Menu</h2>
+            <!-- contenedor para el menu de hamburguesas -->
+            <section class="menu-hamburguesa">
+                <!-- div*6 
+                    section>article*6
+                -->
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Basica</h5>
+                        <button class="btn btn-tarjeta">Ordenar Ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>2 X 1</h5>
+                        <button class="btn btn-tarjeta">Ordenar Ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Mas vegetales</h5>
+                        <button class="btn btn-tarjeta">Ordenar Ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Doble Carne</h5>
+                        <button class="btn btn-tarjeta">Ordenar Ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Pull Burguer</h5>
+                        <button class="btn btn-tarjeta">Ordenar Ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Extra Queso</h5>
+                        <button class="btn btn-tarjeta">Ordenar Ahora</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
